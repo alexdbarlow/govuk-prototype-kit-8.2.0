@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+    <form action="3" method="post" class="form">
+
+      <h1 class="govuk-heading-xl">Please tell us about yourself
+      </h1>
+
+      <form class="form" action="/url/of/next/page" method="post">
+
+        <p>What is your name?</p>
+
+        <div class="govuk-form-group">
+                <label class="govuk-label" for="name">
+                  Full name
+                </label>
+                <input class="govuk-input" name="full-name" type="text" value="{{ data['full-name'] }}">
+              
+              </div>
+
+
+            <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
