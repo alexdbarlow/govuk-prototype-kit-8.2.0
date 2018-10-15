@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<form action="5" method="post" class="form">
+
+        <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                  <h1 class="govuk-fieldset__heading">
+                    What is your email address and contact number?
+                  </h1>
+                </legend>
+              
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="email-address">
+                    Please enter your email address
+                  </label>
+                  <input class="govuk-input govuk-!-width-two-thirds" id="email-address" name="email-address" type="text" value="{{ data['email-address'] }}">
+                </div>
+              
+                <div class="govuk-form-group">
+                        <label class="govuk-label" for="contact-number">
+                          Please enter your contact number
+                        </label>
+                        <input class="govuk-input govuk-!-width-two-thirds" id="contact-number" name="contact-number" type="text" value="{{ data['contact-number'] }}">
+                      </div>
+
+              </fieldset>
+
+      <button class="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
